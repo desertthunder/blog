@@ -1,3 +1,5 @@
+import { iconsPlugin, getIconCollections } from "@egoist/tailwindcss-icons"
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -9,6 +11,13 @@ export default {
 				serif: "'Source Serif Pro 4', serif"
 			},
 			colors: {
+				/**
+				 * Goldenrod
+				 *
+				 * Main Shade - 300
+				 *
+				 * Light yellow to orange
+				 */
 				goldenrod: {
 					50: '#fffaeb',
 					100: '#fdf0c8',
@@ -22,6 +31,13 @@ export default {
 					900: '#763111',
 					950: '#431705'
 				},
+				/**
+				 * Calypso
+				 *
+				 * Main Shade - 700
+				 *
+				 * Light blue to dark blue
+				 */
 				calypso: {
 					50: '#f0fbfb',
 					100: '#d9f2f4',
@@ -35,6 +51,13 @@ export default {
 					900: '#264753',
 					950: '#142e38'
 				},
+				/**
+				 * Asparagus
+				 *
+				 * Main Shade - 500
+				 *
+				 * Light green to dark green
+				 */
 				asparagus: {
 					50: '#f5f9f4',
 					100: '#eaf2e6',
@@ -48,6 +71,13 @@ export default {
 					900: '#2e3f28',
 					950: '#162112'
 				},
+				/**
+				 * Dune
+				 *
+				 * Main Shade - 900
+				 *
+				 * Light beige to dark beige
+				 */
 				dune: {
 					50: '#f4f3f2',
 					100: '#e3e1de',
@@ -61,6 +91,13 @@ export default {
 					900: '#3c3434', // Main Shade
 					950: '#272121'
 				},
+				/**
+				 * Loblolly
+				 *
+				 * Main Shade - 300
+				 *
+				 * Light grey to dark grey
+				 */
 				loblolly: {
 					50: '#f5f7f9',
 					100: '#e9edf0',
@@ -74,6 +111,13 @@ export default {
 					900: '#49515f',
 					950: '#2f333c'
 				},
+				/**
+				 * Outer Space
+				 *
+				 * Main Shade - 950
+				 *
+				 * Light black to dark black
+				 */
 				'outer-space': {
 					50: '#f3f7f8',
 					100: '#e1ebec',
@@ -90,5 +134,9 @@ export default {
 			}
 		}
 	},
-	plugins: []
+	plugins: [
+		iconsPlugin({
+			collections: getIconCollections(['ri'])
+		})
+	]
 };

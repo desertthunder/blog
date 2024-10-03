@@ -1,23 +1,30 @@
 # Owais J's Blog
 
+This is a blog built with SvelteKit's static site adapter and prerender
+capabilities. It is deployed to Cloudflare Pages (tentatively) and uses
+a content repository (filled with markdown files) hosted on Github.
+
 ## Tech Stack
 
 - SvelteKit
 - TailwindCSS
+- Github API (Personal Access Token)
 
 ## Features
 
-- Two column with a sidebar
-- Post carousel
-- Responsive
-- Swappable reading font
-- Dark mode
-- Search
-- Tags
-- Pagination
-- RSS feed
-- Sitemap
-- Github as a CMS
+| Feature | Category | Status | Notes |
+| --- | --- | --- | --- |
+| Two column with a sidebar | Layout | In Progress  |  |
+| Post carousel | Layout | Planned |  |
+| Responsive | Layout | Planned |  |
+| Swappable reading font | Layout | Planned |  |
+| Dark mode | Layout | Planned |  |
+| Search | Functionality | Planned |  |
+| Tags | Functionality | Planned |  |
+| Pagination | Functionality | Planned |  |
+| RSS feed | Functionality | Planned |  |
+| Sitemap | Functionality | Planned |  |
+| Github as a CMS | Functionality |  In Progress |  |
 
 ## Design System
 
@@ -33,22 +40,28 @@
 
 ## Links
 
+The *biggest* source of inspiration for this blog under the hood is an article
+Kent C. Dodds wrote about how he built his blog. It is a great read and I highly
+recommend it.
+
+Check it out [here](https://kentcdodds.com/blog/how-i-built-a-modern-website-in-2021).
+
 ### Font Pairings
 
 Link Format: `Heading Font` & `Text Font`
 
-- [https://www.fontpair.co/pairings/epilogue-bold-regular](Epilogue Bold & Regular)
-- [https://www.fontpair.co/pairings/montserrat-open-sans](Montserrat & Open Sans)
-- [https://www.fontpair.co/pairings/montserrat-hind](Montserrat & Hind) ⭐️
-- [https://www.fontpair.co/pairings/source-sans-pro-source-serif-pro](Source Sans Pro & Source Serif Pro) 🟩
+- [Epilogue Bold & Regular](https://www.fontpair.co/pairings/epilogue-bold-regular)
+- [Montserrat & Open Sans](https://www.fontpair.co/pairings/montserrat-open-sans)
+- [Montserrat & Hind](https://www.fontpair.co/pairings/montserrat-hind) ⭐️
+- [Source Sans Pro & Source Serif Pro](https://www.fontpair.co/pairings/source-sans-pro-source-serif-pro) 🟩
     - I like the serif font in this one
-- [https://www.fontpair.co/pairings/josefin-sans-inter](Josefin Sans & Inter) 🟩
+- [Josefin Sans & Inter](https://www.fontpair.co/pairings/josefin-sans-inter) 🟩
     - I like the heading font
-- [https://www.fontpair.co/pairings/cabin-bold-cabin-regular](Cabin Bold & Regular)
-- [https://www.fontpair.co/pairings/montserrat-source-sans-pro](Montserrat & Source Sans Pro)
-- [https://www.fontpair.co/pairings/forum-work-sans](Forum & Work Sans)
+- [Cabin Bold & Regular](https://www.fontpair.co/pairings/cabin-bold-cabin-regular)
+- [Montserrat & Source Sans Pro](https://www.fontpair.co/pairings/montserrat-source-sans-pro)
+- [Forum & Work Sans](https://www.fontpair.co/pairings/forum-work-sans)
     - The heading font looks very professional.
-- [https://www.fontpair.co/pairings/montserrat-lato](Montserrat & Lato)
+- [Montserrat & Lato](https://www.fontpair.co/pairings/montserrat-lato)
     - Text font is easy to read.
 
 ### Inspiration
@@ -62,4 +75,4 @@ Link Format: `Heading Font` & `Text Font`
 
 - [Carbon Design System](https://www.carbondesignsystem.com/)
 - [Carbon Snippets](https://carbon.now.sh/)
-- [https://www.fontpair.co/](Font Pair)
+- [Font Pair](https://www.fontpair.co/)

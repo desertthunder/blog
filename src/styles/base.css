@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    @apply text-slate-950 bg-outer-space-300;
+    @apply font-sans font-semibold text-lg;
+
+    letter-spacing: -0.01em;
+}
+
+body {
+    @apply flex flex-col min-h-screen items-center;
+    @apply overscroll-none;
+}
+
+h1 {
+    @apply font-headings font-bold;
+}
+
+h1 {
+    @apply text-4xl;
+}
+
+h1.site-title {
+    @apply text-5xl;
+}
