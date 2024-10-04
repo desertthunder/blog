@@ -1,4 +1,5 @@
-import { iconsPlugin, getIconCollections } from "@egoist/tailwindcss-icons"
+import { iconsPlugin, getIconCollections } from '@egoist/tailwindcss-icons';
+import animatePlugin from 'tailwindcss-animate';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -6,8 +7,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				headings: "'Josefin Sans', sans-serif",
-				sans: "Lato, sans-serif",
+				sans: "'Work Sans Variable', sans-serif",
+				headings: 'DM Sans Variable, sans-serif',
 				serif: "'Source Serif Pro 4', serif"
 			},
 			colors: {
@@ -130,6 +131,58 @@ export default {
 					800: '#3a4b50',
 					900: '#334146',
 					950: '#212c30' // Main Shade
+				},
+
+				/**
+				 * From coolors.co
+				 */
+				'vista-blue': {
+					DEFAULT: '#88aaee',
+					100: '#091c41',
+					200: '#133882',
+					300: '#1c54c3',
+					400: '#457ae4',
+					500: '#88aaee',
+					600: '#9fbaf1',
+					700: '#b7cbf5',
+					800: '#cfddf8',
+					900: '#e7eefc'
+				},
+				pearl: {
+					DEFAULT: '#e8dbc5',
+					100: '#3d3018',
+					200: '#7b6031',
+					300: '#b78f4a',
+					400: '#cfb587',
+					500: '#e8dbc5',
+					600: '#ece2d0',
+					700: '#f1e9dc',
+					800: '#f6f1e8',
+					900: '#faf8f3'
+				},
+				'black-olive': {
+					DEFAULT: '#3d3b30',
+					100: '#0c0c09',
+					200: '#181713',
+					300: '#24231c',
+					400: '#302e26',
+					500: '#3d3b30',
+					600: '#696653',
+					700: '#959078',
+					800: '#b8b5a5',
+					900: '#dcdad2'
+				},
+				snow: {
+					DEFAULT: '#f9f4f5',
+					100: '#402329',
+					200: '#804652',
+					300: '#b37582',
+					400: '#d6b5bc',
+					500: '#f9f4f5',
+					600: '#fbf7f8',
+					700: '#fcf9fa',
+					800: '#fdfbfb',
+					900: '#fefdfd'
 				}
 			}
 		}
@@ -137,6 +190,7 @@ export default {
 	plugins: [
 		iconsPlugin({
 			collections: getIconCollections(['ri'])
-		})
+		}),
+		animatePlugin
 	]
 };

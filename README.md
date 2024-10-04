@@ -10,6 +10,30 @@ a content repository (filled with markdown files) hosted on Github.
 - TailwindCSS
 - Github API (Personal Access Token)
 
+### Markdown Rendering Plan
+
+```mermaid
+graph TD
+    A[Github API] --> B[Fetch & Find Markdown Files] --> C[Cache Markdown Files]
+    D[FileSystem Markdown Files]
+    D --> E[Parse Markdown with marked]
+    C --> E
+    E --> F[Sanitize HTML with DOMPurify]
+    F --> G[Find tokens in the HTML]
+    G --> H[Replace tokens with custom rendering components]
+    G --> I[For code blocks, use shiki or prism]
+    G --> J[For images, use lazy loading]
+    G --> K[Internal links should be preloaded]
+    K --> L[Parse Mermaid diagrams]
+    K --> M[Parse MathJax/Katex equations]
+
+    H --> N[Rendered HTML]
+    I --> N
+    J --> N
+    L --> N
+    M --> N
+```
+
 ## Features
 
 | Feature | Category | Status | Notes |
@@ -25,6 +49,17 @@ a content repository (filled with markdown files) hosted on Github.
 | RSS feed | Functionality | Planned |  |
 | Sitemap | Functionality | Planned |  |
 | Github as a CMS | Functionality |  In Progress |  |
+| Code highlighting | Functionality |  Planned |  |
+| MathJax/Katex support | Functionality |  Planned |  |
+| Mermaid diagrams | Functionality |  Planned |  |
+| Image lazy loading | Functionality |  Planned |  |
+| Internal link preloading | Functionality |  Planned |  |
+| Markdown Token rendering components | Functionality |  Planned |  |
+| (Tech Debt) Test suite | Quality, Documentation |  Planned |  |
+| (Tech Debt) Linting | Quality |  Planned |  |
+| (Tech Debt) Accessibility | Quality |  Planned |  |
+| (Tech Debt) Storybook | Documentation |  Planned |  |
+| SEO | Quality |  Planned |  |
 
 ## Design System
 
