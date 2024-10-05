@@ -1,60 +1,55 @@
 <script lang="ts">
 	import '$styles/base.css';
-	import '@fontsource-variable/josefin-sans';
+	import '@fontsource-variable/work-sans';
 	import '@fontsource-variable/overpass-mono';
 	import '@fontsource-variable/source-serif-4';
-	import '@fontsource/lato/400.css';
+	import '@fontsource-variable/dm-sans';
+
+	import { Navbar, Sidebar, Header } from '$components';
 </script>
 
-<!-- Header Stub -->
-<header class="my-8 py-4 flex justify-between container items-center">
-    <div class="text-dune-100 border-2 border-black rounded shadow-sm p-4 flex hover:shadow-xl duration-500 bg-asparagus-500 hover:bg-asparagus-600">
-        <i class="i-ri-menu-fill text-3xl"></i>
-    </div>
+<svelte:head>
+	<title>Owais Jamil's Blog</title>
+</svelte:head>
 
-	<h1 class="site-title">
-        Owais Jamil
-    </h1>
+<div class="container md:px-16 mx-auto min-h-screen flex flex-col">
+	<Header />
 
-    <div class="text-dune-100 border-2 border-black rounded shadow-sm p-4 flex hover:shadow-xl duration-500 bg-asparagus-500 hover:bg-asparagus-600">
-        <i class="i-ri-search-eye-line text-3xl"></i>
-    </div>
-</header>
+	<Navbar />
 
-<!-- Navbar Stub -->
-<nav class="border-2 border-black bg-loblolly-300 rounded container mb-16">
-	<ul class="flex justify-evenly h-12 items-center">
-		<li><a href="/">Home</a></li>
-		<li><a href="/about">About</a></li>
-		<li><a href="/blog">Blog</a></li>
-		<li><a href="/contact">Contact</a></li>
-	</ul>
-</nav>
+	<div class="flex-1 flex sm:container w-[768px] min-h-[768px]">
+		<Sidebar />
 
-<main class="flex-1 flex sm:container w-[768px] min-h-[768px]">
-	<article class="flex-1 border-2 border-black bg-loblolly-300 p-4 rounded">
-		<slot />
-	</article>
-	<!-- Sidebar Stub -->
-	<aside class="min-w-[25%] flex flex-col ml-16 space-y-8">
-		<!-- Sidebar Card/Section Stub -->
-		{#each [0, 1] as _}
-			<section class="flex-1 border-2 border-black bg-loblolly-300 p-4 rounded"></section>
-		{/each}
-	</aside>
-</main>
+		<main class="flex flex-col w-full space-y-4">
+			<article class="flex-1 border-2 text-black-olive border-black-olive rounded ml-16">
+				<header>
+					<!-- Mac colored circles -->
+					<div class="flex items-center ml-4">
+						<div class="w-4 h-4 bg-red-500 rounded-full"></div>
+						<div class="w-4 h-4 bg-yellow-500 rounded-full mx-2"></div>
+						<div class="w-4 h-4 bg-green-500 rounded-full"></div>
+					</div>
+				</header>
+
+				<div class="p-4">
+					<slot />
+				</div>
+			</article>
+		</main>
+	</div>
+</div>
 
 <!-- Footer Stub -->
-<footer class="border-t border-black bg-loblolly-500 w-full mt-8 p-4">
+<footer class="border-t border-black-olive bg-pearl w-full mt-8 p-4">
 	<p>&copy; 2024 Owais Jamil</p>
 </footer>
 
 <style lang="postcss">
-	li {
-		@apply flex-1 h-full flex items-center justify-center;
+	article {
+		@apply bg-black-olive text-pearl;
 	}
-	li a {
-        @apply text-lg text-white;
-		@apply h-full w-full flex items-center justify-center duration-200 bg-asparagus-500 hover:bg-asparagus-600
+
+	article header {
+		@apply bg-black-olive-100 h-[32px] flex justify-between;
 	}
 </style>

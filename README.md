@@ -36,30 +36,30 @@ graph TD
 
 ## Features
 
-| Feature | Category | Status | Notes |
-| --- | --- | --- | --- |
-| Two column with a sidebar | Layout | In Progress  |  |
-| Post carousel | Layout | Planned |  |
-| Responsive | Layout | Planned |  |
-| Swappable reading font | Layout | Planned |  |
-| Dark mode | Layout | Planned |  |
-| Search | Functionality | Planned |  |
-| Tags | Functionality | Planned |  |
-| Pagination | Functionality | Planned |  |
-| RSS feed | Functionality | Planned |  |
-| Sitemap | Functionality | Planned |  |
-| Github as a CMS | Functionality |  In Progress |  |
-| Code highlighting | Functionality |  Planned |  |
-| MathJax/Katex support | Functionality |  Planned |  |
-| Mermaid diagrams | Functionality |  Planned |  |
-| Image lazy loading | Functionality |  Planned |  |
-| Internal link preloading | Functionality |  Planned |  |
-| Markdown Token rendering components | Functionality |  Planned |  |
-| (Tech Debt) Test suite | Quality, Documentation |  Planned |  |
-| (Tech Debt) Linting | Quality |  Planned |  |
-| (Tech Debt) Accessibility | Quality |  Planned |  |
-| (Tech Debt) Storybook | Documentation |  Planned |  |
-| SEO | Quality |  Planned |  |
+| Feature                             | Category               | Status      | Notes |
+| ----------------------------------- | ---------------------- | ----------- | ----- |
+| Two column with a sidebar           | Layout                 | In Progress |       |
+| Post carousel                       | Layout                 | Planned     |       |
+| Responsive                          | Layout                 | Planned     |       |
+| Swappable reading font              | Layout                 | Planned     |       |
+| Dark mode                           | Layout                 | Planned     |       |
+| Search                              | Functionality          | Planned     |       |
+| Tags                                | Functionality          | Planned     |       |
+| Pagination                          | Functionality          | Planned     |       |
+| RSS feed                            | Functionality          | Planned     |       |
+| Sitemap                             | Functionality          | Planned     |       |
+| Github as a CMS                     | Functionality          | In Progress |       |
+| Code highlighting                   | Functionality          | Planned     |       |
+| MathJax/Katex support               | Functionality          | Planned     |       |
+| Mermaid diagrams                    | Functionality          | Planned     |       |
+| Image lazy loading                  | Functionality          | Planned     |       |
+| Internal link preloading            | Functionality          | Planned     |       |
+| Markdown Token rendering components | Functionality          | Planned     |       |
+| (Tech Debt) Test suite              | Quality, Documentation | Planned     |       |
+| (Tech Debt) Linting                 | Quality                | Planned     |       |
+| (Tech Debt) Accessibility           | Quality                | Planned     |       |
+| (Tech Debt) Storybook               | Documentation          | Planned     |       |
+| SEO                                 | Quality                | Planned     |       |
 
 ## Design System
 
@@ -75,7 +75,7 @@ graph TD
 
 ## Links
 
-The *biggest* source of inspiration for this blog under the hood is an article
+The _biggest_ source of inspiration for this blog under the hood is an article
 Kent C. Dodds wrote about how he built his blog. It is a great read and I highly
 recommend it.
 
@@ -89,15 +89,15 @@ Link Format: `Heading Font` & `Text Font`
 - [Montserrat & Open Sans](https://www.fontpair.co/pairings/montserrat-open-sans)
 - [Montserrat & Hind](https://www.fontpair.co/pairings/montserrat-hind) ⭐️
 - [Source Sans Pro & Source Serif Pro](https://www.fontpair.co/pairings/source-sans-pro-source-serif-pro) 🟩
-    - I like the serif font in this one
+  - I like the serif font in this one
 - [Josefin Sans & Inter](https://www.fontpair.co/pairings/josefin-sans-inter) 🟩
-    - I like the heading font
+  - I like the heading font
 - [Cabin Bold & Regular](https://www.fontpair.co/pairings/cabin-bold-cabin-regular)
 - [Montserrat & Source Sans Pro](https://www.fontpair.co/pairings/montserrat-source-sans-pro)
 - [Forum & Work Sans](https://www.fontpair.co/pairings/forum-work-sans)
-    - The heading font looks very professional.
+  - The heading font looks very professional.
 - [Montserrat & Lato](https://www.fontpair.co/pairings/montserrat-lato)
-    - Text font is easy to read.
+  - Text font is easy to read.
 
 ### Inspiration
 

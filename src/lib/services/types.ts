@@ -14,7 +14,7 @@ export type Fetch = typeof globalThis.fetch;
 export enum Constants {
 	API_VERSION = '2022-11-28',
 	BASE_URL = 'https://api.github.com',
-  USERNAME = 'desertthunder'
+	USERNAME = 'desertthunder'
 }
 
 /**

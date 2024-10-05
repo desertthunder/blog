@@ -1,23 +1,23 @@
 import { GITHUB_PERSONAL_ACCESS_TOKEN } from '$env/static/private';
 import type { PageServerLoad } from './$types';
-import { GithubAPI } from '$lib';
+import { GithubAPI, GithubGraphQL } from '$lib';
+
+const ghGraphQL = GithubGraphQL.factory(GITHUB_PERSONAL_ACCESS_TOKEN);
 
 export const load: PageServerLoad = async ({ fetch }) => {
 	const data = {};
 
-	const githubClient = GithubAPI.factory(fetch);
+	const githubClient = GithubAPI.factory(fetch, GITHUB_PERSONAL_ACCESS_TOKEN);
 
-	githubClient.accessToken = GITHUB_PERSONAL_ACCESS_TOKEN;
-
-	const repositories = await githubClient.getRepositories();
-	const gists = await githubClient.getGists();
-	const profile = await githubClient.getMyProfile();
+	const readme = await githubClient.getProfileREADME();
+	const pinned = await ghGraphQL.getPinnedRepositories();
 
 	Object.assign(data, {
-		repositories,
-		gists,
-		profile: profile.serialized
+		readme,
+		pinned
 	});
+
+	console.log(data);
 
 	return {
 		props: {

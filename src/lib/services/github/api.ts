@@ -3,8 +3,6 @@ import { Constants, GithubAPIEndpoints, User } from '../types';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 
-
-
 type SerializedREADME = Record<keyof Omit<README, 'url' | 'serialized'>, string>;
 
 export class README {
@@ -18,7 +16,7 @@ export class README {
 	markdown: string;
 
 	constructor(data: Record<string, string>) {
-    const markdown = atob(data.content);
+		const markdown = atob(data.content);
 
 		this.type = data.type;
 		this.name = data.name;
@@ -26,15 +24,15 @@ export class README {
 		this.url = data.url;
 		this.html_url = data.html_url;
 		this.download_url = data.download_url;
-    this.markdown = markdown;
+		this.markdown = markdown;
 		this.html = README.parse(markdown);
 	}
 
-  static parse(content: string): string {
-    const markup = marked(content) as string;
+	static parse(content: string): string {
+		const markup = marked(content) as string;
 
-    return DOMPurify.sanitize(markup);
-  }
+		return DOMPurify.sanitize(markup);
+	}
 
 	get serialized(): SerializedREADME {
 		return {
@@ -163,7 +161,7 @@ export class GithubAPI {
 			throw new Error('Failed to fetch data');
 		}
 
-    const data = await response.json();
+		const data = await response.json();
 
 		return new README(data);
 	}

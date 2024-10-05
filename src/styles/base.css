@@ -3,25 +3,20 @@
 @tailwind utilities;
 
 :root {
-    @apply text-slate-950 bg-outer-space-300;
-    @apply font-sans font-semibold text-lg;
+	@apply absolute h-full w-full inset-0;
+	@apply bg-white bg-[linear-gradient(to_right,#80808012_2px,transparent_1.5px),linear-gradient(to_bottom,#80808012_1.5px,transparent_1.5px)] bg-[size:24px_24px];
+	@apply text-black-olive;
+	@apply font-sans;
 
-    letter-spacing: -0.01em;
+	letter-spacing: -0.01em;
 }
 
 body {
-    @apply flex flex-col min-h-screen items-center;
-    @apply overscroll-none;
+	@apply flex flex-col min-h-screen items-center;
+	@apply overscroll-none;
 }
 
 h1 {
-    @apply font-headings font-bold;
-}
-
-h1 {
-    @apply text-4xl;
-}
-
-h1.site-title {
-    @apply text-5xl;
+	@apply font-headings font-bold;
+	@apply text-4xl;
 }

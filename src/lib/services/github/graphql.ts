@@ -51,13 +51,13 @@ export class GithubGraphQL {
 			}
 		`;
 
-    const response = await this.client.query(query, {}).toPromise();
+		const response = await this.client.query(query, {}).toPromise();
 
-    if (response.error) {
-      throw new Error('Failed to fetch data');
-    }
+		if (response.error) {
+			throw new Error('Failed to fetch data');
+		}
 
-    return response.data.viewer.pinnedItems.nodes;
+		return response.data.viewer.pinnedItems.nodes;
 	}
 
 	set accessToken(token: string) {
