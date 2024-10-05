@@ -1,13 +1,20 @@
+/**
+ * @fileoverview Types and constants for the Github API service
+ *
+ * @todo strip down the User class to only include the necessary properties
+ * @todo strip down the Repository class to only include the necessary properties
+ */
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 
 dayjs.extend(relativeTime);
 
-export type FetchFn = typeof globalThis.fetch;
+export type Fetch = typeof globalThis.fetch;
 
 export enum Constants {
 	API_VERSION = '2022-11-28',
-	BASE_URL = 'https://api.github.com'
+	BASE_URL = 'https://api.github.com',
+  USERNAME = 'desertthunder'
 }
 
 /**

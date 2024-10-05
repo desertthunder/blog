@@ -1,1 +1,1 @@
-export { GithubAPI } from './github';
+export { GithubAPI, GithubGraphQL } from './github';

@@ -13,6 +13,7 @@
     "format": "prettier --write .",
     "test:integration": "playwright test",
     "test:unit": "vitest",
+    "debug:unit": "DEBUG=true vitest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -32,6 +33,7 @@
     "@sveltejs/adapter-auto": "^3.0.0",
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "@types/dompurify": "^3.0.5",
     "@types/eslint": "^9.6.0",
     "@types/node": "^22.7.4",
     "autoprefixer": "^10.4.20",
@@ -40,6 +42,7 @@
     "eslint-plugin-storybook": "^0.9.0",
     "eslint-plugin-svelte": "^2.36.0",
     "globals": "^15.0.0",
+    "jsdom": "^25.0.1",
     "postcss": "^8.4.47",
     "prettier": "^3.1.1",
     "prettier-plugin-svelte": "^3.1.2",
@@ -59,7 +62,10 @@
     "@fontsource-variable/overpass-mono": "^5.1.0",
     "@fontsource-variable/source-serif-4": "^5.1.0",
     "@fontsource-variable/work-sans": "^5.1.0",
-    "dayjs": "^1.11.13"
+    "@urql/core": "^5.0.6",
+    "dayjs": "^1.11.13",
+    "dompurify": "^3.1.7",
+    "marked": "^14.1.2"
   },
   "eslintConfig": {
     "extends": [
