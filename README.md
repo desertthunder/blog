@@ -89,15 +89,15 @@ Link Format: `Heading Font` & `Text Font`
 - [Montserrat & Open Sans](https://www.fontpair.co/pairings/montserrat-open-sans)
 - [Montserrat & Hind](https://www.fontpair.co/pairings/montserrat-hind) ⭐️
 - [Source Sans Pro & Source Serif Pro](https://www.fontpair.co/pairings/source-sans-pro-source-serif-pro) 🟩
-  - I like the serif font in this one
+    - I like the serif font in this one
 - [Josefin Sans & Inter](https://www.fontpair.co/pairings/josefin-sans-inter) 🟩
-  - I like the heading font
+    - I like the heading font
 - [Cabin Bold & Regular](https://www.fontpair.co/pairings/cabin-bold-cabin-regular)
 - [Montserrat & Source Sans Pro](https://www.fontpair.co/pairings/montserrat-source-sans-pro)
 - [Forum & Work Sans](https://www.fontpair.co/pairings/forum-work-sans)
-  - The heading font looks very professional.
+    - The heading font looks very professional.
 - [Montserrat & Lato](https://www.fontpair.co/pairings/montserrat-lato)
-  - Text font is easy to read.
+    - Text font is easy to read.
 
 ### Inspiration
 
