@@ -1,11 +1,17 @@
 // Github GraphQL HTTP client
 import { Client, fetchExchange, gql } from '@urql/core';
 
+export type PinnedRepository = {
+	name: string;
+	url: string;
+	topics: Array<{
+		name: string;
+		url: string;
+	}>;
+};
+
 export class GithubGraphQL {
-	private constructor(
-		private client: Client,
-		private token: string
-	) {}
+	private constructor(private client: Client) {}
 
 	static factory(token: string): GithubGraphQL {
 		const client = new Client({
@@ -18,10 +24,10 @@ export class GithubGraphQL {
 			})
 		});
 
-		return new GithubGraphQL(client, token);
+		return new GithubGraphQL(client);
 	}
 
-	async getPinnedRepositories() {
+	async getPinnedRepositories(): Promise<Array<PinnedRepository>> {
 		const query = gql`
 			query {
 				viewer {
@@ -57,10 +63,19 @@ export class GithubGraphQL {
 			throw new Error('Failed to fetch data');
 		}
 
-		return response.data.viewer.pinnedItems.nodes;
-	}
+		const pinned = response.data.viewer.pinnedItems.nodes.map((node: any) => {
+			return {
+				name: node.name,
+				url: node.url,
+				topics: node.repositoryTopics.nodes.map((topic: any) => {
+					return {
+						name: topic.topic.name,
+						url: topic.url
+					};
+				})
+			};
+		});
 
-	set accessToken(token: string) {
-		this.token = token;
+		return pinned as Array<PinnedRepository>;
 	}
 }

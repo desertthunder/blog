@@ -6,6 +6,12 @@
 	import '@fontsource-variable/dm-sans';
 
 	import { Navbar, Sidebar, Header } from '$components';
+	import type { LayoutData } from './$types';
+
+	export let data: LayoutData;
+	export let projects;
+
+	$: projects = data.pinned;
 </script>
 
 <svelte:head>
@@ -18,7 +24,7 @@
 	<Navbar />
 
 	<div class="flex-1 flex sm:container w-[768px] min-h-[768px]">
-		<Sidebar />
+		<Sidebar {projects} />
 
 		<main class="flex flex-col w-full space-y-4">
 			<article class="flex-1 border-2 text-black-olive border-black-olive rounded ml-16">

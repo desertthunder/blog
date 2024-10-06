@@ -3,6 +3,7 @@
  *
  * @todo strip down the User class to only include the necessary properties
  * @todo strip down the Repository class to only include the necessary properties
+ * @todo move ALL types to this file
  */
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';

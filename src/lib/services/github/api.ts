@@ -1,9 +1,9 @@
 import type { Fetch, Repository } from '../types';
 import { Constants, GithubAPIEndpoints, User } from '../types';
 import { marked } from 'marked';
-import DOMPurify from 'dompurify';
+import DOMPurify from 'isomorphic-dompurify';
 
-type SerializedREADME = Record<keyof Omit<README, 'url' | 'serialized'>, string>;
+export type SerializedREADME = Record<keyof Omit<README, 'url' | 'serialized'>, string>;
 
 export class README {
 	type: string;

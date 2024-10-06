@@ -20,3 +20,61 @@ h1 {
 	@apply font-headings font-bold;
 	@apply text-4xl;
 }
+
+.profile {
+	@apply text-pretty;
+}
+
+.profile h1,
+.profile h2,
+.profile h3,
+.profile h4,
+.profile h5,
+.profile h6 {
+	@apply font-headings font-bold;
+	@apply text-black-olive-900;
+	@apply border-b border-b-black-olive-900;
+	@apply pb-2 mb-2;
+}
+
+.profile h1 {
+	@apply text-3xl;
+}
+
+.profile h2 {
+	@apply text-2xl;
+}
+
+.profile h3 {
+	@apply text-xl;
+}
+
+.profile h4 {
+	@apply text-lg;
+}
+
+.profile p {
+	@apply py-2 mb-2;
+}
+
+.profile p {
+	@apply flex;
+}
+
+.profile p + h2 {
+	@apply mt-8;
+}
+
+.profile p + h3 {
+	@apply mt-4;
+}
+
+.profile p a {
+	@apply text-black-olive-800;
+	@apply hover:text-black-olive-700;
+	@apply mx-1;
+}
+
+p {
+	@apply space-x-2;
+}
