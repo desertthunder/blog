@@ -23,11 +23,11 @@
 
 	<Navbar />
 
-	<div class="flex-1 flex sm:container w-[768px] min-h-[768px]">
+	<div class="flex-1 flex sm:container min-h-[768px]">
 		<Sidebar {projects} />
 
-		<main class="flex flex-col w-full space-y-4">
-			<article class="flex-1 border-2 text-black-olive border-black-olive rounded ml-16">
+		<main class="flex flex-grow ease-out duration-1000">
+			<article class="flex-1 border border-black rounded">
 				<header>
 					<!-- Mac colored circles -->
 					<div class="flex items-center ml-4">
@@ -52,10 +52,10 @@
 
 <style lang="postcss">
 	article {
-		@apply bg-black-olive text-pearl;
+		@apply bg-black-olive-600 text-pearl;
 	}
 
 	article header {
-		@apply bg-black-olive-100 h-[32px] flex justify-between;
+		@apply bg-black-olive-300 h-[32px] flex justify-between;
 	}
 </style>

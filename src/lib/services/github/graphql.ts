@@ -4,6 +4,7 @@ import { Client, fetchExchange, gql } from '@urql/core';
 export type PinnedRepository = {
 	name: string;
 	url: string;
+	description: string;
 	topics: Array<{
 		name: string;
 		url: string;
@@ -34,12 +35,13 @@ export class GithubGraphQL {
 					login
 					name
 					location
-					pinnedItems(first: 6) {
+					pinnedItems(last: 4) {
 						nodes {
 							... on Repository {
 								name
 								url
-								repositoryTopics(first: 5) {
+								description
+								repositoryTopics(first: 3) {
 									nodes {
 										... on RepositoryTopic {
 											id
@@ -67,6 +69,7 @@ export class GithubGraphQL {
 			return {
 				name: node.name,
 				url: node.url,
+				description: node.description,
 				topics: node.repositoryTopics.nodes.map((topic: any) => {
 					return {
 						name: topic.topic.name,
